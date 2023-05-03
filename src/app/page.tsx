@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Homeimg from "../img/Home.png";
 import Aboutimg from "../img/About.png";
 import Esat from "../img/Esat.png";
+import Master_Finance from "../img/Master_Finance.png";
+import Portfolio from "../img/Portfolio.png";
 import { Linkedin } from "./ico/Linkedin";
 import { Github } from "./ico/Github";
 import { Twitter } from "./ico/Twitter";
@@ -23,6 +26,43 @@ const nunito = Nunito({
 
 export default function Home() {
   const gradient = "linear-gradient( #383838ea, #00eeffea)";
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    // console.log(JSON.stringify(formData));
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/route", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error);
+      alert(data.message);
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error: any) {
+      alert(error.message);
+    }
+  };
+
   return (
     <>
       <style jsx global>{`
@@ -183,8 +223,8 @@ export default function Home() {
             >
               <h4 className="text-2xl text-white">Web App Development</h4>
               <p className="text-base text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-                similique fugit impedit consequatur alias. Omnis qui magnam
+                Web application for a company that provides services for measure
+                the employe satisfaction level.
               </p>
               <a
                 href=""
@@ -197,8 +237,8 @@ export default function Home() {
 
           <div className="portfolio-box relative rounded-3xl shadow-4xl flex overflow-hidden">
             <Image
-              src={Esat}
-              alt="Esat-project"
+              src={Portfolio}
+              alt="Portfolio-project"
               className="filter-none w-full transition-transform"
             />
             <div
@@ -207,8 +247,8 @@ export default function Home() {
             >
               <h4 className="text-2xl text-white">Web App Development</h4>
               <p className="text-base text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-                similique fugit impedit consequatur alias. Omnis qui magnam
+                My personal web portfolio responsive develop using Nexs js 13,
+                Tailwind css and firebase.
               </p>
               <a
                 href=""
@@ -221,18 +261,18 @@ export default function Home() {
 
           <div className="portfolio-box relative rounded-3xl shadow-4xl flex overflow-hidden transition-all">
             <Image
-              src={Esat}
-              alt="Esat-project"
+              src={Master_Finance}
+              alt="Master_Finance-project"
               className="filter-none w-full transition-transform"
             />
             <div
               className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center flex-col text-center py-0 px-16 translate-y-full"
               style={{ background: gradient }}
             >
-              <h4 className="text-2xl text-white">Web App Development</h4>
+              <h4 className="text-2xl text-white">Multi Platform App</h4>
               <p className="text-base text-white">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-                similique fugit impedit consequatur alias. Omnis qui magnam
+                Multi platform financial website and app develop using HTML, CSS
+                and Javascript and React Native, also using PHP and PostgeSQL.
               </p>
               <a
                 href=""
@@ -276,39 +316,51 @@ export default function Home() {
           Contact{" "}
           <span className="inline-block text-homeColor font-bold">Me!</span>
         </h2>
-        <form action="#" className="max-w-6xl mx-auto text-center mb-12">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-6xl mx-auto text-center mb-12"
+        >
           <div className="flex justify-between">
             <input
+              name={"name"}
               type="text"
               placeholder="Full Name"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
+              onChange={handleChange}
             />
             <input
               type="email"
+              name={"email"}
               placeholder="Email Address"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
+              onChange={handleChange}
             />
           </div>
           <div className="flex justify-between ">
             <input
               type="number"
+              name={"phone"}
               placeholder="Mobile Number"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
+              onChange={handleChange}
             />
             <input
               type="text"
+              name={"subject"}
               placeholder="Email Subject"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
+              onChange={handleChange}
             />
           </div>
           <div className="w-full p-3">
             <textarea
               className="w-full p-3 text-white bg-gray-700 rounded-xl resize-none"
-              name=""
+              name={"message"}
               id=""
               cols={30}
               rows={10}
               placeholder="Your Message"
+              onChange={handleChange}
             ></textarea>
           </div>
           <input
