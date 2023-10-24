@@ -8,7 +8,11 @@ const cors = Cors({
 });
 
 // Función auxiliar para ejecutar el middleware CORS
-function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) {
+function runMiddleware(
+  req: NextApiRequest,
+  res: NextApiResponse,
+  fn: Function
+) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result: unknown) => {
       if (result instanceof Error) {
@@ -19,12 +23,17 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) 
   });
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   // Ejecutar el middleware CORS
   await runMiddleware(req, res, cors);
   console.log(req.body);
 
   // Verificar el método de la solicitud
+  console.log(req.method);
+  
   if (req.method !== "POST") {
     res.status(405).json({ message: "Método no permitido." });
     return;
@@ -50,8 +59,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Enviar el correo electrónico
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Correo electrónico enviado exitosamente." });
+    res
+      .status(200)
+      .json({ message: "Correo electrónico enviado exitosamente." });
   } catch (error) {
-    res.status(500).json({ message: "Error al enviar el correo electrónico.", error });
+    res
+      .status(500)
+      .json({ message: "Error al enviar el correo electrónico.", error });
   }
 }
