@@ -8,7 +8,10 @@ import styled from 'styled-components';
 
 const StyledServicesSection = styled.section`
   background-color: rgb(31 41 55) ;
-  padding-bottom: 6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @media (min-width: 768px) {
     padding-top: 8rem;
@@ -33,7 +36,7 @@ const StyledServiceCard = styled.div`
 export function Services() {
     return (
         <StyledServicesSection id="services">
-            <h2 className="md:text-4xl text-4xl text-center  md:mx-0 mb-4 font-bold text-white">
+            <h2 className="text-4xl text-center mb-8 font-bold text-white">
                 Our{" "}
                 <span className="inline-block text-homeColor font-bold">
                     Services

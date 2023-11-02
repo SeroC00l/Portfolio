@@ -37,7 +37,7 @@ export function PortfolioSection() {
                                 the employe satisfaction level.
                             </p>
                             <a
-                                href=""
+                                href="https://github.com/SeroC00l/ESAT"
                                 className="text-gray-800 text-3xl h-12 w-12 bg-white rounded-full inline-flex justify-center items-center mt-3"
                             >
                                 <External />
@@ -61,7 +61,7 @@ export function PortfolioSection() {
                                 Tailwind css and firebase.
                             </p>
                             <a
-                                href=""
+                                href="https://github.com/SeroC00l/Portfolio"
                                 className="text-gray-800 text-3xl h-12 w-12 bg-white rounded-full inline-flex justify-center items-center mt-3"
                             >
                                 <External />
@@ -83,30 +83,6 @@ export function PortfolioSection() {
                             <p className="text-base text-white">
                                 Multi platform financial website and app develop using HTML, CSS
                                 and Javascript and React Native, also using PHP and PostgeSQL.
-                            </p>
-                            <a
-                                href=""
-                                className="text-gray-800 text-3xl h-12 w-12 bg-white rounded-full inline-flex justify-center items-center mt-3"
-                            >
-                                <External />
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="portfolio-box relative rounded-3xl shadow-4xl flex overflow-hidden transition-all">
-                        <Image
-                            src={Esat}
-                            alt="Esat-project"
-                            className="filter-none h-full w-full transition-transform"
-                        />
-                        <div
-                            className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center flex-col text-center py-0 px-16 translate-y-full"
-                            style={{ background: gradient }}
-                        >
-                            <h4 className="text-2xl text-white">Web App Development</h4>
-                            <p className="text-base text-white">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-                                similique fugit impedit consequatur alias. Omnis qui magnam
                             </p>
                             <a
                                 href=""

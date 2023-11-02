@@ -19,6 +19,13 @@ export const Contact = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    // Validación: Verifica si los campos obligatorios están llenos
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      alert("Please, fill out all the required data");
+      return;
+    }
+
     try {
       const res = await fetch("api/contact", {
         method: "POST",
@@ -61,6 +68,7 @@ export const Contact = () => {
               placeholder="Full Name"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
               onChange={handleChange}
+              required
             />
             <input
               type="email"
@@ -68,6 +76,7 @@ export const Contact = () => {
               placeholder="Email Address"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
               onChange={handleChange}
+              required
             />
           </div>
           <div className="flex justify-between ">
@@ -84,6 +93,7 @@ export const Contact = () => {
               placeholder="Email Subject"
               className="w-1/2 p-3 text-white bg-gray-700 m-3 rounded-xl"
               onChange={handleChange}
+              required
             />
           </div>
           <div className="w-full p-3">
@@ -95,6 +105,7 @@ export const Contact = () => {
               rows={10}
               placeholder="Your Message"
               onChange={handleChange}
+              required
             ></textarea>
           </div>
           <input
