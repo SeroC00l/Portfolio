@@ -1,3 +1,5 @@
+'use client';
+
 import { HomeSection } from "./components/Home";
 import { About } from "./components/About";
 import { Services } from "./components/Services";
