@@ -55,9 +55,9 @@ const HomeSection = () => {
                         <Instagram />
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <button className="inline-block px-4 py-2 bg-homeColor rounded-3xl shadow-3xl text-lg font-bold text-gray-800 hover:shadow-none hover:bg-gray-800 hover:text-homeColor border-homeColor border-2">
+                        <a href="https://drive.google.com/file/d/1Rdjepn-a5fPvVR8-QMz11GaAZJb7bpZg/view?usp=sharing" target="_blank" className="inline-block px-4 py-2 bg-homeColor rounded-3xl shadow-3xl text-lg font-bold text-gray-800 hover:shadow-none hover:bg-gray-800 hover:text-homeColor border-homeColor border-2">
                             Download CV
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div>
