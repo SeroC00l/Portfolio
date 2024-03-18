@@ -32,9 +32,9 @@ export function About() {
             thrive in collaborative team environments.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="inline-block px-4 py-2 bg-homeColor rounded-3xl shadow-3xl text-lg font-bold text-gray-800 hover:shadow-none hover:bg-gray-800 hover:text-homeColor border-2 border-homeColor transition-all">
+            <a href="https://www.linkedin.com/in/alejourrea/" target='_blank' className="inline-block px-4 py-2 bg-homeColor rounded-3xl shadow-3xl text-lg font-bold text-gray-800 hover:shadow-none hover:bg-gray-800 hover:text-homeColor border-2 border-homeColor transition-all">
               Read More
-            </button>
+            </a>
           </div>
         </div>
       </section>
