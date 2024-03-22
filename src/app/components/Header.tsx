@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Header = () => {
   return (
     <header className="text-white h-20 font-serif justify-between md:flex hidden fixed top-0 left-0 right-0 bg-gray-800 shadow-xl z-50">

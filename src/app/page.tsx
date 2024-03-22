@@ -1,10 +1,8 @@
-'use client';
-
-import { HomeSection } from "./components/Home";
-import { About } from "./components/About";
-import { Services } from "./components/Services";
-import { PortfolioSection } from "./components/Portfolio";
-import { Contact } from "./components/Contact";
+import { HomeSection } from "./sections/Home";
+import { About } from "./sections/About";
+import { Services } from "./sections/Services";
+import { PortfolioSection } from "./sections/Portfolio";
+import { Contact } from "./sections/Contact";
 import { Footer } from "./components/Footer";
 
 export default function Home() {

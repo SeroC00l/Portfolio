@@ -19,7 +19,7 @@ export function PortfolioSection() {
           <span className="inline-block text-homeColor font-bold">Project</span>
         </h2>
 
-        <div className="md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-4 md:mx-8 lg:mx-20">
+        <div className="md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 flex flex-col mx-4 md:mx-8 lg:mx-20">
           {projects.map((project, index) => (
             <div key={index} className="portfolio-box relative rounded-3xl shadow-4xl flex overflow-hidden transition-all">
               <Image
@@ -37,6 +37,8 @@ export function PortfolioSection() {
                 <p className="text-base text-white">{project.description}</p>
                 <a
                   href={project.githubLink}
+                  target='_blank'
+                  rel='noopener noreferer'
                   className="text-gray-800 text-3xl h-12 w-12 bg-white rounded-full inline-flex justify-center items-center mt-3"
                 >
                   <External />
@@ -70,6 +72,6 @@ const projects = [
     description: 'Multi-platform financial website and app developed using HTML, CSS, and JavaScript and React Native. Also using PHP and PostgreSQL.',
     image: Master_Finance,
     alt: 'Master_Finance-project',
-    githubLink: '', // Add your link here
+    githubLink: 'https://github.com/SeroC00l/master-finance',
   },
 ];
