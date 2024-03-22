@@ -4,6 +4,7 @@ import { External } from '../ico/External';
 import Esat from 'public/img/Esat.png';
 import Master_Finance from 'public/img/Master_Finance.png';
 import Portfolio from 'public/img/Portfolio.png';
+import NiceNails from 'public/img/NiceNails.png';
 
 export function PortfolioSection() {
   const gradient = 'linear-gradient( #383838ea, #00eeffea)';
@@ -73,5 +74,12 @@ const projects = [
     image: Master_Finance,
     alt: 'Master_Finance-project',
     githubLink: 'https://github.com/SeroC00l/master-finance',
+  },
+  {
+    title: 'Nice Nails Landing & Store',
+    description: 'Responsive Landing and Store page made with Astro and Tailwind CSS, and deployed in vercel ',
+    image: NiceNails,
+    alt: 'Nice-Nails-project',
+    githubLink: 'https://github.com/SeroC00l/nice-nails',
   },
 ];
