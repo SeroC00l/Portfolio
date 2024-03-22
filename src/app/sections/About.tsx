@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from "next/image";
-import Aboutimg from "../../img/About.png";
+import Aboutimg from "public/img/About.png";
 
 export function About() {
   return (

@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import { External } from '../ico/External';
-import Esat from '../../img/Esat.png';
-import Master_Finance from '../../img/Master_Finance.png';
-import Portfolio from '../../img/Portfolio.png';
+import Esat from 'public/img/Esat.png';
+import Master_Finance from 'public/img/Master_Finance.png';
+import Portfolio from 'public/img/Portfolio.png';
 
 export function PortfolioSection() {
   const gradient = 'linear-gradient( #383838ea, #00eeffea)';
