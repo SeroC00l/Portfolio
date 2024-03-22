@@ -1,6 +1,6 @@
 # Portafolio Web de Alejandro Urrea
 
-![Captura de pantalla 1](/screenshots/screenshot1.png)
+![Captura de pantalla 1](/public/img/portfolio.png)
 
 Este es mi portafolio personal desarrollado utilizando Next.js, una poderosa herramienta para construir aplicaciones web modernas.
 
