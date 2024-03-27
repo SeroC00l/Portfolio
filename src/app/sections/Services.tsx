@@ -1,6 +1,6 @@
-import { Code } from "../ico/Code";
-import { Api } from "../ico/Api";
-import { Android } from "../ico/Android";
+import { Code } from "../components/icons/Code";
+import { Api } from "../components/icons/Api";
+import { Android } from "../components/icons/Android";
 
 export function Services() {
   return (

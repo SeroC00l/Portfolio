@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HomeImg from "/public/img/Home.png"
-import { Linkedin } from "@/components/ui/Linkedin";
+import { LinkedinButton } from "@/components/ui/LinkedinButton";
 import { GithubButton } from "@/components/ui/GithubButton";
 import { Email } from "@/components/ui/Email";
 
@@ -56,7 +56,7 @@ export const HomeSection = ({ data }: Props) => {
           {description}
         </p>
         <div className="gap-5 flex lg:justify-start justify-center mb-8">
-          <Linkedin link={linkedinLink} />
+          <LinkedinButton link={linkedinLink} />
           <GithubButton link={githubLink} />
           <Email />
         </div>

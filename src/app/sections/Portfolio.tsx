@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { External } from '../ico/External';
+import { External } from '../components/icons/External';
 import Esat from 'public/img/Esat.png';
 import Master_Finance from 'public/img/Master_Finance.png';
 import Portfolio from 'public/img/Portfolio.png';
