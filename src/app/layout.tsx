@@ -24,7 +24,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       </head>
       <body className={`${nunito.className} select-none  bg-gray-800`}>
         <Menu />
