@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Nunito } from "next/font/google";
-import { Menu } from "./components/Menu";
-import { Header } from "./components/Header";
+import { Menu } from "@/components/Menu";
+import { Header } from "@/components/Header";
 
 export const metadata = {
   title: "Alejandro Urrea's Portfolio",
@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
       </head>
       <body className={`${nunito.className} select-none  bg-gray-800`}>
         <Menu />

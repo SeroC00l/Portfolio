@@ -1,0 +1,14 @@
+{
+  "HomeSection": {
+    "id": "home",
+    "name": "Alejandro Urrea",
+    "description": "I'm a React expert fullstack developer with experience creating efficient and user-friendly web applications for e-commerce and social media platforms. Let's talk about how I can contribute to your team's goals.",
+    "linkedinLink": "https://www.linkedin.com/in/alejourrea/",
+    "githubLink": "https://github.com/SeroC00l",
+    "cvLink": "https://drive.google.com/file/d/1Rdjepn-a5fPvVR8-QMz11GaAZJb7bpZg/view?usp=sharing",
+    "image": {
+      "alt": "home",
+      "priority": true
+    }
+  }
+}
