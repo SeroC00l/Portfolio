@@ -1,6 +1,5 @@
 import "@/globals.css";
 import { Nunito } from "next/font/google";
-import { Menu } from "@/components/Menu";
 import { Header } from "@/components/Header";
 
 export const metadata = {
@@ -26,7 +25,6 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
       </head>
       <body className={`${nunito.className} select-none  bg-gray-800`}>
-        <Menu />
         <Header />
         {children}
       </body>

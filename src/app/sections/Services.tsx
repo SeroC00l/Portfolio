@@ -4,7 +4,7 @@ import { Android } from "../components/icons/Android";
 
 export function Services() {
   return (
-    <section className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-8 md:py-16 px-4 md:px-8">
+    <section id="services" className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-8 md:py-16 px-4 md:px-8">
       <h2 className="text-4xl text-white font-bold mb-8">
         Our <span className="text-homeColor  font-bold">Services</span>
       </h2>

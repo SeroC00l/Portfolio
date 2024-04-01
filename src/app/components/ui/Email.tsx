@@ -3,8 +3,12 @@
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
 
-export const Email = () => {
-  const emailAddress = "aleurrea4@gmail.com";
+interface Props {
+  mail: string;
+}
+
+export const Email = ({mail}: Props) => {
+  const emailAddress = mail;
   const [copied, setCopied] = useState(false);
 
   const handleCopyToClipboard = async () => {
@@ -18,9 +22,9 @@ export const Email = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center gap-1 transition-all duration-300">
       <button
-        className="border-2 text-homeColor transition-all duration-300 gap-2 border-homeColor border-solid rounded-full px-4 py-2 mt-2 hover:shadow-homeColor hover:shadow-3xl flex items-center"
+        className="border-2 text-homeColor  gap-2 border-homeColor border-solid rounded-full px-4 py-2 mt-2 hover:shadow-homeColor hover:shadow-3xl flex items-center"
         onClick={handleCopyToClipboard}
       >
         <span>{emailAddress}</span>

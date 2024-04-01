@@ -1,16 +1,17 @@
 import Image from "next/image";
 import HomeImg from "/public/img/Home.png"
-import { LinkedinButton } from "@/components/ui/LinkedinButton";
-import { GithubButton } from "@/components/ui/GithubButton";
+import { Button } from "@/components/ui/Button";
 import { Email } from "@/components/ui/Email";
 
 interface HomeData {
   HomeSection: {
     id: string;
     name: string;
+    mail: string;
     description: string;
     linkedinLink: string;
     githubLink: string;
+    twitchlink: string;
     cvLink: string;
     image: {
       alt: string;
@@ -27,9 +28,11 @@ export const HomeSection = ({ data }: Props) => {
   const {
     id,
     name,
+    mail,
     description,
     linkedinLink,
     githubLink,
+    twitchlink,
     cvLink,
     image,
   } = data.HomeSection;
@@ -56,9 +59,10 @@ export const HomeSection = ({ data }: Props) => {
           {description}
         </p>
         <div className="gap-5 flex lg:justify-start justify-center mb-8">
-          <LinkedinButton link={linkedinLink} />
-          <GithubButton link={githubLink} />
-          <Email />
+          <Button link={linkedinLink} icon="Linkedin" />
+          <Button link={githubLink} icon="Github" />
+          <Button link={twitchlink} icon="Twitch"/>
+          <Email mail={mail} />
         </div>
         <div className="flex justify-center md:justify-start">
           <a
